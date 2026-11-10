@@ -121,6 +121,12 @@ var SPEC = {
     animationDuration: {
         def: 250
     },
+    motionCurvePreset: {
+        def: "expressiveDefaultSpatial"
+    },
+    customMotionCurve: {
+        def: [0.38, 1.21, 0.22, 1.0]
+    },
     enableRippleEffects: {
         def: true
     },

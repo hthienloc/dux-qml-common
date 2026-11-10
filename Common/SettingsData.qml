@@ -28,6 +28,8 @@ Singleton {
     }
 
     property int animationSpeed: SettingsData.AnimationSpeed.Short
+    property string motionCurvePreset: "expressiveDefaultSpatial"
+    property var customMotionCurve: [0.38, 1.21, 0.22, 1.0]
     property bool reduceMotion: false
     property bool blurBorderEnabled: false
     property real blurLayerOutlineOpacity: 0
