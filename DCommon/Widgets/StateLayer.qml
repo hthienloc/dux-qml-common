@@ -72,6 +72,11 @@ MouseArea {
         _ripple.trigger(x, y, true);
     }
 
+    onDisabledChanged: {
+        if (disabled)
+            _ripple?.stop();
+    }
+
     onPressed: mouse => pressRipple(mouse.x, mouse.y)
     onReleased: _ripple?.release()
     onCanceled: _ripple?.release()

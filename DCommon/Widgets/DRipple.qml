@@ -38,6 +38,10 @@ Item {
         fxItem?.release();
     }
 
+    function stop() {
+        fxItem?.stop();
+    }
+
     Component {
         id: fxComponent
 
@@ -67,6 +71,14 @@ Item {
                 if (enter.running)
                     return;
                 fade.restart();
+            }
+
+            function stop() {
+                held = false;
+                enter.stop();
+                fade.stop();
+                rippleFx.rippleOpacity = 0;
+                rippleFx.rippleRadius = 0;
             }
 
             ParallelAnimation {
